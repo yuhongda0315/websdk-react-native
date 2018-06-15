@@ -9,6 +9,7 @@ export default class MySelfView extends React.Component{
   render(){
     return (
       <View>
+        <HeaderView></HeaderView>
         <Image style={styles.logo} source={require('../res/about-seal.png') } />
 
         <Button
@@ -30,13 +31,13 @@ const styles = StyleSheet.create({
     width: width * 0.8,
   },
   logoutBtn: {
-    top: height * 0.6,
+    top: height * 0.7,
     backgroundColor: '#40B1FC',
     borderWidth: 0
   },
   logo: {
     position: 'absolute',
-    top: height * 0.1,
+    top: height * 0.2,
     left: width * 0.19
   }
 });

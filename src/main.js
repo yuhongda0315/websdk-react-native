@@ -1,9 +1,7 @@
 import React from 'react';
 import { StyleSheet, View, Text, Image, Dimensions } from 'react-native';
 import TabNavigator from 'react-native-tab-navigator';
-
-import HeaderView from './common/header';
-import ConversationListView from './conversation/list'
+import ConversationListView from './conversation/index'
 import ChatView from './conversation/chat'
 import ContactListView from './contacts/list'
 import FoundListView from './found/list'
@@ -22,12 +20,11 @@ export default class MainView extends React.Component{
     selectedTab: '会话'
   };
   constructor(props){
-    super(props);
+    super(props.navigation);
   }
   render() {
     return (
       <View style={styles.container} >
-          <HeaderView></HeaderView>
           <TabNavigator>
             <TabNavigator.Item
                 selected={this.state.selectedTab === '会话'}

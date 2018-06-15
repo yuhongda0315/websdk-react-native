@@ -7,6 +7,7 @@ export default class ContactListView extends React.Component{
   render(){
     return (
       <ScrollView>
+        <HeaderView></HeaderView>
         <View style={ styles.conversation }>
           <Image style={CommonStyle.avatar} source={{uri: 'http://oojs2ztoq.bkt.clouddn.com/e5b42a6c71c8705f5fb765de1f4f4523150X150.jpg'}} />
           <View style={styles.header}>

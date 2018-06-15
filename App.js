@@ -1,8 +1,16 @@
 import React from 'react';
 import {AppRegistry, StyleSheet, View, DeviceEventEmitter } from 'react-native';
+import { createStackNavigator } from "react-navigation";
 
 import LoginView from './src/login';
 import MainView from './src/main';
+
+const ListNavigator = createStackNavigator({
+  Main: { screen: MainView },
+  Login: { screen: LoginView }
+},{
+    initialRouteName: 'Main'
+});
 
 export default class App extends React.Component {
   constructor(props) {
@@ -47,4 +55,4 @@ const styles = StyleSheet.create({
   }
 });
 
-AppRegistry.registerComponent('App', () => App);
+AppRegistry.registerComponent('App', () => ListNavigator);

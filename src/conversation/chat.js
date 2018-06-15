@@ -3,6 +3,9 @@ import { StyleSheet, View, ScrollView, Text, Image } from 'react-native';
 import { CommonStyle } from '../common/stylesheet';
 
 export default class ChatView extends React.Component{
+  static navigationOptions = {
+    title: 'Martin'
+  };
   render(){
     return (
       <View>
